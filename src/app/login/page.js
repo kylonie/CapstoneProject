@@ -23,7 +23,7 @@ export default function Login() {
     <div className='flex min-h-1 flex-1 flex-col justify-center px-6 py-12 lg:px-8'>
         <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
             <Image src='/logo.jpg' width={400} height={400}></Image>
-            <h2 className='text-center text-2xl font-bold text-black'>Sign in to your account</h2>
+            
         </div>
 
         <div className='mt-5 sm:mx-auto sm:w-full sm:max-w-sm'>
