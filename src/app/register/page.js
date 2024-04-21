@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
 import { useRouter } from "next/navigation";
-import { Input, Button } from "@material-tailwind/react";
+import { Alert, Input, Button, Card, CardHeader, CardBody, CardFooter, Typography } from "@material-tailwind/react";
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 export default function Register() {
@@ -22,40 +22,29 @@ export default function Register() {
         }
     }
   return (
-    <div className='flex min-h-1 flex-1 flex-col justify-center px-6 py-12 lg:px-8'>
-        <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
-            <Image src='/logo.jpg' width={400} height={400}></Image>
-            <h2 className='text-center text-2xl font-bold text-black'>Register an account.</h2>
-        </div>
+    <div className='flex min-h-1 flex-1 flex-col justify-center items-center px-6 py-12 lg:px-8'>
+        <Card className="w-96">
 
-        <div className='mt-5 sm:mx-auto sm:w-full sm:max-w-sm'>
-            <div>
-                <label className='mb-2 block text-sm text-black'>Email address</label>
-                <Input label='Email address' onChange={(e)=>setEmail(e.target.value)} value={email}></Input>
-            </div>
-        </div>
+            <CardHeader variant="gradient" color="blue-gray" className="flex justify-center grid h-28 place-items-center">
+                <Typography variant="h3" color="white">Register</Typography>
+            </CardHeader>
 
-        <div className='mt-5 sm:mx-auto sm:w-full sm:max-w-sm'>
-            <div>
-                <label className='mb-2 block text-sm text-black'>Password</label>
-                <Input label='Password'onChange={(e)=>setPassword(e.target.value)} value={password}></Input>
-            </div>
-        </div>
+            <CardBody className="flex flex-col gap-4">
+                <Typography variant='small' color="blue-gray" className="flex justify-center mt-1 font-normal">Nice to meet you! Enter your details to register.</Typography>
+                <Input label="Email" type='email' color='blue-gray' size="lg" onChange={(e)=>setEmail(e.target.value)} value={email}/>
+                <Input label="Password" type='password' color='blue-gray' size="lg" onChange={(e)=>setPassword(e.target.value)} value={password}/>
+            </CardBody>
 
-        <div className='mt-2 flex justify-center'>
-            <div>
-                <Link href='/login'>Sign in here.</Link>
-            </div>
-        </div>
 
-        <div className='mt-5 flex justify-center'>
-            <div>
-                <Button onClick={handleRegister}>Sign Up</Button>
-            </div>
-        </div>
+            <CardFooter className="pt-0">
+                <Button variant="gradient" color='blue-gray' fullWidth onClick={handleRegister}>Register</Button>
+                <Typography variant="small" color='blue-gray' className="mt-6 flex justify-center">Already have an account?
+                <Link href="/login" variant="small" className="ml-1 font-bold">Sign In here</Link>
+                </Typography>
+            </CardFooter>
 
+        </Card>
     </div>
-
 
   )
 }
