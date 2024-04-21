@@ -57,7 +57,7 @@ const [expressionCount, setExpressionCount] = useState({});
         } else {
           setMaxExpression('No faces detected');
         }
-      }, 5000);
+      }, 3000);
     };
 
     loadModels().then(processVideo);
