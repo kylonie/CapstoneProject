@@ -22,24 +22,24 @@ export default function Register() {
         }
     }
   return (
-    <div className='flex min-h-1 flex-1 flex-col justify-center items-center px-6 py-12 lg:px-8'>
+    <div className='flex min-h-1 flex-1 flex-col justify-center items-center px-6 py-12 lg:px-8 mt-2'>
         <Card className="w-96">
 
-            <CardHeader variant="gradient" color="blue-gray" className="flex justify-center grid h-28 place-items-center">
-                <Typography variant="h3" color="white">Register</Typography>
+            <CardHeader variant="gradient" color="#eeeeee" className="flex justify-center grid h-auto place-items-center shadow-none">
+                <Image src="/VibeCap_Logo_Register.png" width={275} height={250} alt='Logo'/>
             </CardHeader>
 
             <CardBody className="flex flex-col gap-4">
                 <Typography variant='small' color="blue-gray" className="flex justify-center mt-1 font-normal">Nice to meet you! Enter your details to register.</Typography>
-                <Input label="Email" type='email' color='blue-gray' size="lg" onChange={(e)=>setEmail(e.target.value)} value={email}/>
-                <Input label="Password" type='password' color='blue-gray' size="lg" onChange={(e)=>setPassword(e.target.value)} value={password}/>
+                <Input label="Email" type='email' required color='light-blue' size="lg" onChange={(e)=>setEmail(e.target.value)} value={email}/>
+                <Input label="Password" type='password' required color='light-blue' size="lg" onChange={(e)=>setPassword(e.target.value)} value={password}/>
             </CardBody>
 
 
             <CardFooter className="pt-0">
-                <Button variant="gradient" color='blue-gray' fullWidth onClick={handleRegister}>Register</Button>
-                <Typography variant="small" color='blue-gray' className="mt-6 flex justify-center">Already have an account?
-                <Link href="/login" variant="small" className="ml-1 font-bold">Sign In here</Link>
+                <Button variant="gradient" color='light-blue' fullWidth onClick={handleRegister}>Register</Button>
+                <Typography variant="small" color='blue-gray' className="mt-6 flex justify-center">Already registered?
+                <Link href="/login" variant="small" className="ml-1 font-bold">Sign in</Link>
                 </Typography>
             </CardFooter>
 
