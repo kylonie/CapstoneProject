@@ -64,7 +64,7 @@ export default function NavbarComponent() {
         <div className="flex items-center">
           <Link href="/userhomepage">
             <Image
-            src="/VibeCap_Logo_User.gif"
+            src="/VibeCap_Logo_User.png"
             width={100}
             height={100}
             alt="Logo"
