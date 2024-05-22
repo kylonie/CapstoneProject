@@ -32,6 +32,8 @@ export default function Register() {
             <CardBody className="flex flex-col gap-4">
                 <Typography variant='h5' color="blue-gray" className="flex justify-center">Register an account</Typography>
                 <Typography variant='small' color="gray" className="flex justify-center font-normal">Nice to meet you! Enter your details to register.</Typography>
+                <Input label="Full name" type='text' required color='light-blue'/>
+                <Input label="Contact no." type='text' required color='light-blue'/>
                 <Input label="Email" type='email' required color='light-blue' size="lg" onChange={(e)=>setEmail(e.target.value)} value={email}/>
                 <Input label="New password" type='password' required color='light-blue' size="lg" onChange={(e)=>setPassword(e.target.value)} value={password}/>
             </CardBody>
