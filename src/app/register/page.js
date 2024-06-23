@@ -50,7 +50,7 @@ export default function Register() {
                 <Typography variant='small' color="gray" className="flex justify-center font-normal">Nice to meet you! Enter your details to register.</Typography>
                 <Input label="First name" type='text' autoFocus='true' required color='light-blue' size="lg" onChange={(e)=>setFName(e.target.value)} value={fname}/>
                 <Input label="Last name" type='text' required color='light-blue' size="lg" onChange={(e)=>setLName(e.target.value)} value={lname}/>
-                <Input label="Contact no." type='text' required color='light-blue' size="lg" onChange={(e)=>setContact(e.target.value)} value={contact}/>
+                <Input label="Mobile no." type='text' required color='light-blue' size="lg" onChange={(e)=>setContact(e.target.value)} value={contact}/>
                 <Input label="Email" type='email' required color='light-blue' size="lg" onChange={(e)=>setEmail(e.target.value)} value={email}/>
                 <Input label="New password" type='password' required color='light-blue' size="lg" onChange={(e)=>setPassword(e.target.value)} value={password}/>
             </CardBody>
