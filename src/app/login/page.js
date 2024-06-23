@@ -33,7 +33,7 @@ export default function Login() {
         <Card className="w-96">
 
             <CardHeader variant="gradient" color="white" className="flex justify-center grid h-auto place-items-center shadow-none">
-                <Image src="/VibeCap_Logo_Login.png" width={275} height={275} alt='Logo'/>
+                <Image src="/VibeCap_Logo_Login.png" width={190} height={190} alt='Logo'/>
             </CardHeader>
 
             <CardBody className="flex flex-col gap-4">

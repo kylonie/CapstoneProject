@@ -42,7 +42,7 @@ export default function Register() {
         <Card className="w-96">
 
             <CardHeader variant="gradient" color="#eeeeee" className="flex justify-center grid h-auto place-items-center shadow-none">
-                <Image src="/VibeCap_Logo_Register.png" width={275} height={250} alt='Logo'/>
+                <Image src="/VibeCap_Logo_Register.png" width={200} height={200} alt='Logo'/>
             </CardHeader>
 
             <CardBody className="flex flex-col gap-4">
